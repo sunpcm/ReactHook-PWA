@@ -1,2 +1,2 @@
 # ReactHook-PWA
-a ticket demo with react hooks and pwa
+A ticket demo with react hooks and pwa
