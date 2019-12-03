@@ -7,7 +7,7 @@ A ticket demo with react hooks and pwa
 
 使用createContext创建Context，然后使用`Provider`嵌套，再在`Consumer`里取值
 
-```js
+```jsx
 const BatteryContext = createContext();
 ···
 //组建A
@@ -37,7 +37,7 @@ static contextType = StateContext;
 
 在React Hooks中可以调用`useContext`：
 
-```js
+```jsx
 //组建B
 const battery = useContext(BatteryContext);
   return (
