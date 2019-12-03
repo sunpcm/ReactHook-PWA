@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useContext } from 'react';
 import './App.css';
 
 
@@ -6,24 +6,9 @@ const BatteryContext = createContext();
 const OnlineContext = createContext();
 
 const Leaf = () => {
+  const battery = useContext(BatteryContext);
   return (
-    <BatteryContext.Consumer>
-      {
-        battery => (
-          <OnlineContext.Consumer>
-            {
-              online => (
-                <>
-                  <h1>Batter:{battery}</h1>
-                  <h1>Online:{online ? 'Yes' : 'No'}</h1>
-                </>
-              )
-            }
-
-          </OnlineContext.Consumer>
-        )
-      }
-    </BatteryContext.Consumer>
+    <h1>Batter:{battery}</h1>
   )
 }
 
